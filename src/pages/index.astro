@@ -1,0 +1,45 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Hello, <code>visitor</code>!</h1>
+			<p>
+				My name is Aaron. I am a professional web software engineer from San Diego, California.
+			</p>
+			<p class="bold">I am available for remote software engineering work, and consulting.</p>
+			<ul>
+				<li><a href="/AaronBartholomewResume.pdf" target="_blank">Resume</a></li>
+				<li><a href="https://www.linkedin.com/in/aaron-bartholomew-46234735/" target="_blank">Linkedin</a></li>
+				<li><a href="https://twitter.com/whysoaaron" target="_blank">Twitter</a></li>
+				<li><a href="https://github.com/blixxurd" target="_blank">Github</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	ul {
+		list-style-type: none;
+		padding: unset;
+	}
+
+	ul li {
+		display: flex;
+		padding-top: 0.5em;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+</style>
